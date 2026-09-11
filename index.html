@@ -1,25 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, Brody</title>
     <style>
       :root {
-        font-family: system-ui, sans-serif;
-        color: #1f2937;
-        background: #f8fafc;
+        font-family: "Trebuchet MS", "Avenir Next", Avenir, sans-serif;
+        color: #17436d;
+        background: #86d7f5;
       }
 
       body {
         display: grid;
+        overflow: hidden;
         min-height: 100vh;
         margin: 0;
         place-items: center;
+        background:
+          radial-gradient(circle at 82% 16%, #fff5a8 0 5.5rem, transparent 5.65rem),
+          radial-gradient(circle at 82% 16%, rgb(255 215 94 / 45%) 0 8.5rem, transparent 8.65rem),
+          linear-gradient(#71ccf0 0%, #a8e4f6 62%, #e5f6d6 100%);
       }
 
       h1 {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 0.3em 0.65em;
+        border: 4px solid rgb(255 255 255 / 70%);
+        border-radius: 1.2em;
+        background: rgb(255 255 255 / 72%);
+        box-shadow: 0 0.25rem 0.75rem rgb(28 111 151 / 20%);
         font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        text-align: center;
+        text-shadow: 0 2px 0 #fff;
+      }
+
+      body::before,
+      body::after {
+        position: fixed;
+        width: 18rem;
+        height: 5.5rem;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 78%);
+        content: "";
+      }
+
+      body::before {
+        top: 16%;
+        left: -3rem;
+        box-shadow: 5.5rem -1.7rem 0 0.6rem rgb(255 255 255 / 78%),
+          11rem -0.4rem 0 0.2rem rgb(255 255 255 / 78%);
+      }
+
+      body::after {
+        right: -5rem;
+        bottom: 12%;
+        transform: scale(0.75);
+        box-shadow: -5.5rem -1.4rem 0 0.7rem rgb(255 255 255 / 78%),
+          -10.5rem -0.2rem 0 0.3rem rgb(255 255 255 / 78%);
       }
     </style>
   </head>
